@@ -1,12 +1,13 @@
 /* Font Face */
 @font-face {
     font-family: 'Nexa-Heavy';
-    src: url('../src/assets/Nexa-Heavy.ttf') format('truetype');
-}
-@font-face {
+    src: url('/p14converted/assets/Nexa-Heavy.ttf') format('truetype');
+  }
+  
+  @font-face {
     font-family: 'Heavitas';
-    src: url('../src/assets/Heavitas.ttf') format('truetype');
-}
+    src: url('/p14converted/assets/Heavitas.ttf') format('truetype');
+  }
 
 /* Reset */
 * {

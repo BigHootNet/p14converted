@@ -3,6 +3,10 @@ import { Provider } from 'react-redux';
 import { store } from './redux/store';
 import App from './App';
 
+console.log('Starting React app');
+console.log('Store:', store);
+console.log('App component:', App);
+
 ReactDOM.render(
   <Provider store={store}>
     <App />
