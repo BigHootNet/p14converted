@@ -7,10 +7,10 @@ import './styles/app.css';
 
 const App: React.FC = () => {
   return (
-    <Router>
+    <Router basename="/p14converted">
       <Routes>
-        <Route path="/p14converted/" element={<Home />} />
-        <Route path="/p14converted/employee-list" element={<EmployeeList />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/employee-list" element={<EmployeeList />} />
       </Routes>
     </Router>
   );

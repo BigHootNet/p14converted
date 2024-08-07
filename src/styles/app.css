@@ -85,6 +85,14 @@ header h1 {
 }
 
 /* Forms */
+.form-container {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
 form {
     background-color: #FFFFFF;
     border: 1px solid #D2D2D7;

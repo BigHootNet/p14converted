@@ -1,4 +1,3 @@
-// src/lib/Modal.tsx
 import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 
@@ -40,8 +39,10 @@ const ModalHeader = styled.div`
 `;
 
 const ModalBody = styled.div`
-  max-height: 300px;
+  height: 20vh;
+  margin-top: 5vh;
   overflow-y: auto;
+  line-height: 20px;
 `;
 
 const CloseButton = styled.button`
