@@ -16,6 +16,7 @@ const Home: React.FC = () => {
 
   return (
     <div className="form-container">
+      
       <EmployeeForm onEmployeeAdded={handleEmployeeAdded} />
       <Modal isOpen={modalIsOpen} onClose={closeModal} title="Confirmation">
         <p>Employee added successfully!</p>
