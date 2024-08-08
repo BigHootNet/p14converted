@@ -1,9 +1,13 @@
 {
-  "name": "kasa",
+  "name": "WealthHealth",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://BigHootNet.github.io",
+  "homepage": "https://BigHootNet.github.io/p14converted",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BigHootNet/p14converted.git"
+  },
   "scripts": {
     "dev": "vite --port 5500 --host",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
@@ -14,7 +18,7 @@
     "build-lib": "tsc --project tsconfig.json"
   },
   "dependencies": {
-    "@bighoot/modal-library": "^1.0.2",
+    "@bighoot/modal-library": "^1.0.8",
     "@reduxjs/toolkit": "^2.2.6",
     "@types/react-router": "^5.1.20",
     "axios": "^1.7.2",
