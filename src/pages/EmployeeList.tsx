@@ -47,36 +47,38 @@ const EmployeeList: React.FC = () => {
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
-      <table id="employee-table" className="display">
-        <thead>
-          <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Start Date</th>
-            <th>Department</th>
-            <th>Date of Birth</th>
-            <th>Street</th>
-            <th>City</th>
-            <th>State</th>
-            <th>Zip Code</th>
-          </tr>
-        </thead>
-        <tbody>
-          {currentEmployees.map((employee, index) => (
-            <tr key={index}>
-              <td>{employee.firstName}</td>
-              <td>{employee.lastName}</td>
-              <td>{employee.startDate}</td>
-              <td>{employee.department}</td>
-              <td>{employee.dateOfBirth}</td>
-              <td>{employee.street}</td>
-              <td>{employee.city}</td>
-              <td>{employee.state}</td>
-              <td>{employee.zipCode}</td>
+      <div className="table-container">
+        <table id="employee-table" className="display">
+          <thead>
+            <tr>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Start Date</th>
+              <th>Department</th>
+              <th>Date of Birth</th>
+              <th>Street</th>
+              <th>City</th>
+              <th>State</th>
+              <th>Zip Code</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {currentEmployees.map((employee, index) => (
+              <tr key={index}>
+                <td>{employee.firstName}</td>
+                <td>{employee.lastName}</td>
+                <td>{employee.startDate}</td>
+                <td>{employee.department}</td>
+                <td>{employee.dateOfBirth}</td>
+                <td>{employee.street}</td>
+                <td>{employee.city}</td>
+                <td>{employee.state}</td>
+                <td>{employee.zipCode}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
       <ReactPaginate
         previousLabel={'Previous'}
         nextLabel={'Next'}
@@ -88,7 +90,7 @@ const EmployeeList: React.FC = () => {
         containerClassName={'pagination'}
         activeClassName={'active'}
       />
-      <a href="/p14converted/">Home</a>
+      <a className="homebtn"href="/">Home</a>
     </div>
   );
 };

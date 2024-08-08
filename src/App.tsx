@@ -7,7 +7,7 @@ import './styles/app.css';
 
 const App: React.FC = () => {
   return (
-    <Router basename="/p14converted">
+    <Router>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/employee-list" element={<EmployeeList />} />
