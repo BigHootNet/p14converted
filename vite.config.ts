@@ -3,9 +3,11 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 
 export default defineConfig(({ mode }) => {
+  const base = mode === 'production' ? '/p14converted/' : '/';
+
   return {
     plugins: [react()],
-    base: '/',
+    base: base,
     build: {
       outDir: 'dist',
       rollupOptions: {
