@@ -39,7 +39,7 @@ const EmployeeList: React.FC = () => {
   const currentEmployees = filteredEmployees.slice(indexOfFirstEmployee, indexOfLastEmployee);
 
   return (
-    <div className="container">
+    <div className="employee_container">
       <h1>Current Employees</h1>
       <input
         type="text"
