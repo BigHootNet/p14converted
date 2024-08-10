@@ -2,12 +2,12 @@
 @font-face {
     font-family: 'Nexa-Heavy';
     src: url('/assets/Nexa-Heavy.ttf') format('truetype');
-  }
-  
-  @font-face {
+}
+
+@font-face {
     font-family: 'Heavitas';
     src: url('/assets/Heavitas.ttf') format('truetype');
-  }
+}
 
 /* Reset */
 * {
@@ -20,6 +20,7 @@ html, body {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    font-size: 16px;
 }
 
 body {
@@ -30,7 +31,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 2vh 2vw;
+    min-height: 100vh;
 }
 
 a {
@@ -47,11 +49,11 @@ button {
     background-color: #0071E3;
     color: #FFFFFF;
     border: none;
-    padding: 12px 24px;
+    padding: 1.2vh 2.4vw;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 2vh;
     transition: background-color 0.3s ease;
-    border-radius: 6px;
+    border-radius: 1vh;
 }
 
 button:hover {
@@ -65,53 +67,66 @@ button:disabled {
 
 /* Layout */
 .container {
-    max-width: 1200px;
+    max-width: 100%;
     width: 100%;
-    padding: 20px;
-    overflow: hidden;
+    padding: 2vh 2vw;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 header {
     background-color: #F5F5F7;
-    padding: 20px;
+    padding: 2vh 2vw;
     text-align: center;
     width: 100%;
 }
 
 header h1 {
     color: #1D1D1F;
-    font-size: 2rem;
+    font-size: 4vw;
     font-weight: 600;
 }
 
 /* Forms */
+.form-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 6vh); /* Prend en compte le padding de body */
+}
+
 form {
     background-color: #FFFFFF;
-    border: 1px solid #D2D2D7;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 12px;
+    border: 0.2vh solid #D2D2D7;
+    padding: 2vh 2vw;
+    margin: 2vh 0;
+    border-radius: 1.2vh;
     width: 100%;
-    max-width: 500px;
+    max-width: 50vw;
 }
 
 form label {
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 1vh;
     color: #6E6E73;
     font-weight: 600;
+    font-size: 2vh;
 }
 
 form input,
 form select {
     width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
-    border: 1px solid #D2D2D7;
+    padding: 1.2vh 1.5vw;
+    margin-bottom: 2vh;
+    border: 0.2vh solid #D2D2D7;
     background-color: #F5F5F7;
     color: #1D1D1F;
-    border-radius: 8px;
-    font-size: 1rem;
+    border-radius: 0.8vh;
+    font-size: 2vh;
     transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
@@ -128,11 +143,11 @@ input[type="date"] {
     appearance: none;
     font-family: inherit;
     font-size: inherit;
-    padding: 12px;
-    border: 1px solid #D2D2D7;
+    padding: 1.2vh 1.5vw;
+    border: 0.2vh solid #D2D2D7;
     background-color: #F5F5F7;
     color: #1D1D1F;
-    border-radius: 8px;
+    border-radius: 0.8vh;
     width: 100%;
 }
 
@@ -143,13 +158,15 @@ input[type="date"] {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #FFFFFF;
-    padding: 20px;
-    border: 1px solid #D2D2D7;
+    padding: 2vh 2vw;
+    border: 0.2vh solid #D2D2D7;
     z-index: 1000;
     display: none;
-    border-radius: 12px;
-    max-width: 90%;
-    width: 400px;
+    border-radius: 1.2vh;
+    max-width: 90vw;
+    width: 40vw;
+    max-height: 90vh;
+    overflow: auto; /* Permet le défilement si nécessaire */
 }
 
 .modal.active {
@@ -159,7 +176,7 @@ input[type="date"] {
 /* Employee List */
 .table-container {
     overflow-x: auto;
-    margin: .6vw 0;
+    margin: 0.6vw 0;
     width: 100%;
     max-width: 100%;
 }
@@ -171,10 +188,10 @@ table {
 }
 
 th, td {
-    border: 1px solid #D2D2D7;
-    padding: .6vw;
+    border: 0.2vh solid #D2D2D7;
+    padding: 1vh 1vw;
     text-align: left;
-    font-size: .8vw;
+    font-size: 1.6vh;
 }
 
 th {
@@ -191,17 +208,17 @@ td {
 .pagination {
     display: flex;
     justify-content: center;
-    margin: 5vw 0;
+    margin: 5vh 0;
     list-style-type: none;
 }
 
 .pagination a {
     color: #0071E3;
-    padding: .2vw .4vw;
-    border: .1vw solid #D2D2D7;
-    margin: 0 5px;
+    padding: 1vh 2vw;
+    border: 0.2vh solid #D2D2D7;
+    margin: 0 1vh;
     transition: background-color 0.3s ease;
-    border-radius: 6px;
+    border-radius: 1vh;
 }
 
 .pagination a:hover {
@@ -220,16 +237,16 @@ td {
 @media (max-width: 1200px) {
 
     button {
-        padding: 10px 20px;
-        font-size: 0.9rem;
+        padding: 1vh 2vw;
+        font-size: 1.8vh;
     }
 
     th, td {
-        font-size: 1.2vw;
-        padding: 1.8vw .5vw;
+        font-size: 2vh;
+        padding: 1.8vh 1vw;
     }
     .table-container {
-        margin: 0.1vw 0;
+        margin: 0.1vh 0;
     }
 }
 
@@ -239,58 +256,69 @@ td {
     }
     .container {
         min-width: 100%;
-        padding: 0px;
+        padding: 0;
     }
 
     button {
-        padding: 8px 16px;
-        font-size: 0.8rem;
+        padding: 1vh 2vw;
+        font-size: 1.6vh;
     }
 
     th, td {
-        font-size: 1.4vw;
-        padding: 5vw .4vw;
+        font-size: 1.8vh;
+        padding: 2vh 1vw;
     }
 
     form, .table-container, .modal {
         width: 100%;
-        padding: 10px 0px;
+        padding: 2vh 2vw;
     }
 
     .pagination a {
-        padding: 8px 16px;
-        font-size: 0.8rem;
+        padding: 1.5vh 2vw;
+        font-size: 1.6vh;
     }
 }
 
 @media (max-width: 480px) {
-    
 
     button {
-        padding: 6px 12px;
-        font-size: 0.7rem;
+        padding: 0.8vh 1.2vw;
+        font-size: 1.4vh;
     }
 
     html, body {
-        overflow: auto;
-        padding: 0px;
+        overflow: hidden;
     }
 
     th, td {
-        font-size: 1.5vw;
-        padding: 8vw 0.5vw;
+        font-size: 1.6vh;
+        padding: 3vh 1vw;
     }
 
     form, .modal {
-        padding: 2vw;
+        padding: 2vh 2vw;
     }
 
     .pagination a {
-        padding: 6px 12px;
-        font-size: 0.7rem;
+        padding: 1vh 1.5vw;
+        font-size: 1.4vh;
     }
+
     .homebtn {
         position: relative;
-        top: -2vh;
+        top: 0;
+    }
+}
+
+@media (min-width: 1440px) {
+    .form-container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .table-container {
+        max-width: 1200px;
+        margin: 0 auto;
     }
 }
