@@ -35,6 +35,10 @@ body {
     min-height: 100vh;
 }
 
+#root { 
+    width: 100%;
+}
+
 a {
     color: #0071E3;
     text-decoration: none;
@@ -180,6 +184,7 @@ input[type="date"] {
     width: 100%;
     max-width: 100%;
     height: 50vh;
+    margin-top: 2vh;
 }
 
 table {
@@ -308,7 +313,7 @@ td {
         font-size: 3vw;
         padding: 1.5vh 2vw;
         white-space: nowrap;
-        word-wrap: break-word;         /* All browsers since IE 5.5+ */
+        word-wrap: break-word;
         overflow-wrap: break-word;
         width: fit-content;
     }
